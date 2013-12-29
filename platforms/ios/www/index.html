@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+    <title></title>
+  
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css">
+
+    <link rel="stylesheet" href="css/gs.css">
+  
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.mobile-1.3.2.min.js"></script>
+</head>
+<body>
+<!-- Home -->
+<div data-role="page" id="home">
+    <div>
+        <div>
+            <img class="gb-img" src="img/PaulEJacobs.png" alt="image"/>
+        </div>
+        <div class="gb-name">
+            Paul E. Jacobs
+        </div>
+        <div class="gb-job">
+            Executive Chairman of the Board of Directors of Qualcomm
+        </div>
+
+        <div id="news" class="hlist">
+            
+        </div>
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top" class="bar-style">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Articles -->
+<div data-role="page" id="articles">
+    <div class="page-title">
+        <span class="title">Articles</span>
+    </div>
+    <ul id="articleList" data-role="listview" data-divider-theme="b" class="list">
+        <li data-theme="c" class="ar-bullet">
+            <a href="#a7" data-transition="slide">
+                <div class="source">Barron's</div><div class="ar-date">Nov 23, 2013</div><br/>
+                <div class="ar-title">Tech Giant Qualcomm Ages Gracefully</div>
+            </a>
+        </li>
+        <li data-theme="c" class="ar-bullet">
+            <a href="#a3" data-transition="slide">
+                <div class="source">The Wall Street Journal</div><div class="ar-date">Nov 22, 2013</div><br/>
+                <div class="ar-title">Qualcomm CEO Says NSA Fallout Impacting China Business</div>
+            </a>
+        </li>
+        <li data-theme="c" class="ar-bullet">
+            <a href="#a6" data-transition="slide">
+                <div class="source">The Wall Street Journal</div><div class="ar-date">Nov 20, 2013</div><br/>
+                <div class="ar-title">Qualcomm Steps Up Attack on Internet of Things</div>
+            </a>
+        </li>
+        <li data-theme="c" class="ar-bullet">
+            <a href="#a5" data-transition="slide">
+                <div class="source">The Wall Street Journal</div><div class="ar-date">Nov 20, 2013</div><br/>
+                <div class="ar-title">Qualcomm Sees Much Broader Future for LTE</div>
+            </a>
+        </li>
+        <li data-theme="c" class="ar-bullet">
+            <a href="#a8" data-transition="slide">
+                <div class="source">blog.stemconnector.org</div><div class="ar-date">Oct 7, 2013</div><br/>
+                <div class="ar-title">Today's CEO Leader in STEM Dr. Paul E.Jacobs of Qualcomm Incorporated</div>
+            </a>
+        </li>
+        <li data-theme="c" class="ar-bullet">
+            <a href="#a4" data-transition="slide">
+                <div class="source">The Wall Street Journal</div><div class="ar-date">Sep 4, 2013</div><br/>
+                <div class="ar-title">Qualcomm Makes Surprise Entry to 'Smartwatch' Fray</div>
+            </a>
+        </li>
+        <li data-theme="c" class="ar-bullet">
+            <a href="#a2" data-transition="slide">
+                <div class="source">YAHOO Finance</div><div class="ar-date">Jan 08, 2013</div><br/>
+                <div class="ar-title">Paul E. Jacobs, Ph.D, Chairman & CEO of Qualcomm to Receive the Prestigious 2013 Edison Achievement Award</div>
+            </a>
+        </li>
+        <li data-theme="c" class="ar-bullet">
+            <a href="#a1" data-transition="slide">
+                <div class="source">The New York Times</div><div class="ar-date">Jun 12, 2011</div><br/>
+                <div class="ar-title">At Qualcomm, Rise of Founder's Son Defies Hazards of Succession</div>
+            </a>
+        </li>
+    </ul>
+    
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--v1-->
+<div data-role="page" id="v1">
+    <a class="back arrow" href='#articles' data-transition="slide" onclick="stopCurrentVideo();">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        Cardinal Health's Chairman & CEO George Barrett on Board Leadership
+    </div>
+    <div class="a-body">
+        <video id="video1" style="width:300px" controls>
+            <source src="http://54.215.134.149:8080/file/getFile/g1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<!--a1-->
+<div data-role="page" id="a1">
+    <a class="back arrow" href='#articles' data-transition="slide">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        At Qualcomm, Rise of Founder’s Son Defies Hazards of Succession
+    </div>
+    <div class="a-body">
+        <div>SAN DIEGO — When Paul E. Jacobs took over from his father as chief executive of the chip maker Qualcomm in 2005, mobile phones were just beginning their transition from tools for talking to hand-held computers delivering data and entertainment.</div><br/>
+
+        <div>“We talk about the future of computing being mobile, but I don’t feel that way,” said Mr. Jacobs, 48. “I feel the present of computing is mobile.”</div><br/>
+
+        <div>Mr. Jacobs has spent the last six years expanding Qualcomm’s business beyond his father’s tight focus on the digital wireless technology known as C.D.M.A. (code division multiple access).</div><br/>
+
+        <div>While Irwin Jacobs, 77, the M.I.T. professor and electronics wizard who founded the company in 1985 and retired in 2005, was known for his dogged defense of the company’s intellectual property, his son Paul is more prone to talk breathlessly about a connected world where mobile devices diagnose our illnesses, turn on our lights, control our thermostats and allow doctors to remotely monitor our health in real time.</div><br/>
+
+        <div>Such a family succession in publicly traded companies is rare; Ford Motor and Comcast come to mind. For it to succeed is rarer still.</div><br/>
+
+        <div>Corporate governance specialists often disapprove of such successions. But the younger Mr. Jacobs has positioned Qualcomm, which builds chips for mobile devices, to lead the smartphone chip market as consumers increasingly do their computing in their palms and not tethered to their desks.</div><br/>
+
+        <div>Last year Qualcomm dominated a diverse field of smartphone chip makers with 41 percent of the total market share in terms of revenue and nearly 61 percent of the market share for application processors used in smartphones powered by Google’s Android operating system, according to the market research firm Strategy Analytics.</div><br/>
+
+        <div>Part of the company’s success is that the market for smartphones has been so robust. In 2010, smartphone shipments shot up 74 percent over the year before, while the market for PCs increased just 14 percent, according to the market research firm IDC.</div><br/>
+
+        <div>Such huge growth in hand-held computers has rival chip makers like Intel, Nvidia, Samsung and Texas Instruments in a tight race to build smaller, more power-efficient chips, capable of running the increasingly complex apps, location-based services and graphics consumers have come to expect in their phones. Intel, which dominated PC chips, is late to this market, so it is anyone’s game to win.</div><br/>
+
+        <div>Qualcomm’s strategy has been to create high-function, low-powered chip sets for smartphones and tablets that connect with other devices in various ways — a feat that has thus far largely eluded Intel. Qualcomm’s ARM-based Snapdragon chips are just such all-in-one processors.</div><br/>
+
+        <div>“Qualcomm has a two- or three-year advantage in terms of integration,” said Stuart Robinson, an analyst at Strategy Analytics.</div><br/>
+
+        <div>Qualcomm managed a leadership feat unusual in the modern business environment.</div><br/>
+
+        <div>“Qualcomm has been able to do the handoff from father to son that most other companies have not been able to do,” said Cody Acree, an analyst at the Williams Financial Group who has covered Qualcomm and the chip industry for more than a decade.</div><br/>
+
+        <div>“Paul is an engineer who owns patents in his own right and was a brilliant technologist before moving into this position,” he said. “And I think the industry as a whole respected him, knowing he was not just being given the job because it was his dad’s.”</div><br/>
+
+        <div>Still, the stigma of nepotism trailed Mr. Jacobs. “I could walk into a room and people would just underestimate me. ‘You’re the son of Irwin,’ ” he said. “They would think, ‘This person is only here because of that.’ ”</div><br/>
+
+        <div>The third of four sons, Mr. Jacobs took to computers early, learning to program in middle school on a Teletype terminal. Beginning in seventh grade he worked part time at Linkabit, another technology company founded by his father, which made communications equipment for the military. During college he worked summers at Qualcomm.</div><br/>
+
+        <div>“Another thing that my father did for me was that every summer I worked in another area of engineering, so that by the time I went to college, I had done almost every kind of engineering there was,” said Mr. Jacobs, who went on to earn a Ph.D. in electrical engineering at the University of California, Berkeley, where he focused on robotics.</div><br/>
+
+        <div>Even when he is in a stylish suit, his laid-back cadence — though peppered with computer science acronyms — evokes his skateboarding teenage years here in San Diego. Mr. Jacobs is tall and athletic, and his demeanor as chief seems shaped in equal parts by his hyper-technical upbringing and this sunny, beachside city where he grew up.</div><br/>
+
+        <div>Where Mr. Jacobs seems to revel in the possibilities of a not-so-distant future awash in wireless connectivity, his father had a more professorial, and at times myopic, perspective.</div><br/>
+
+        <div>“Paul is very much broader in the area that he has vision,” said Steven M. Mollenkopf, the executive vice president overseeing Qualcomm’s chip development, who has been with the company since 1994. “He likes the application of the technology in addition to the technology. Irwin traditionally was very engaged in the technology and the creation of the technology.”</div><br/>
+
+        <div>Mr. Jacobs enjoys talking about a world where chips spread out beyond the confines of smartphones. In this so-called Internet of things, everyday objects like TVs, dishwashers, running shoes, blood glucose monitors, picture frames, heart defibrillators and even Band-Aids have tiny chips or sensors that transmit information and communicate with mobile devices like smartphones and tablets.</div><br/>
+
+        <div>“The sensors are going to be on your body, they’re going to be in the environment around you,” Mr. Jacobs said. “You’ll go and step on the scale and the scale will automatically talk to your phone and keep track of your health.”</div><br/>
+
+        <div>For Qualcomm to build out an Internet of things it must design chip sets that can seamlessly interact with countless communication signals including Wi-Fi, cellular, Bluetooth, GPS, peer-to-peer radios and near-field communication. In February, Qualcomm announced a new technology called FlashLinq, which allows devices to recognize one another and communicate automatically and continuously within a one-kilometer radius. Last year, the company spent $2.5 billion, some 23 percent of its revenue, on research and development on just such technologies.</div><br/>
+
+        <div>Qualcomm’s purchase of the chip maker Atheros Communications for $3.1 billion, the company’s largest acquisition, expands Qualcomm beyond phones into tablets and home electronic devices. It moves the company closer to “fulfilling this vision that wireless is going to be embedded in the world around us,” Mr. Jacobs said.</div><br/>
+
+        <div>He is particularly keen on expanding wireless communication into health care. In January, Qualcomm announced a partnership with Telcare to integrate 3G connectivity into blood glucose meters, allowing caregivers to monitor patients’ glucose levels remotely and in real time.</div><br/>
+
+        <div>Some of Mr. Jacobs’s interconnected visions can be wackier. In May, Qualcomm and the X Prize Foundation, which finances competitions for things like space flight and lunar landings, announced a $10 million competition for a diagnostic smartphone tool called Tricorder X, named for a gadget in the Star Trek television show and movies. The challenge is to build a noninvasive but accurate device that can detect health problems.</div><br/>
+
+        <div>“Now this is a little futuristic, I’ll admit,” he said. “But it’s not that farfetched.”</div><br/>
+
+        <div class="gray-header">Published</div>
+        <div>Jun 12, 2011</div>
+        <div class="gray-header">Source</div>
+        <div>The New York Times</div>
+        <div>By MALIA WOLLAN </div>
+        <div>http://www.nytimes.com/2011/06/13/technology/13qualcomm.html?pagewanted=all</div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--a2-->
+<div data-role="page" id="a2">
+    <a class="back arrow" href='#articles' data-transition="slide">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        Paul E. Jacobs, Ph.D., Chairman & CEO of Qualcomm to Receive the Prestigious 2013 Edison Achievement Award
+    </div>
+    <div class="a-body">
+        <div>CHICAGO, IL--(Marketwire - Jan 8, 2013) - The Edison Awards, recognized as one of America's leading innovation awards, today announced that Paul E. Jacobs, Ph.D., Chairman & CEO of Qualcomm Incorporated, will be awarded the prestigious Edison Achievement Award on April 25, 2013 in Chicago. The distinction honors distinguished business executives who have made a significant and lasting contribution to innovation throughout their careers and whose accomplishments serve as inspiration to every industry and to the world at large.</div><br/>
+
+        <div>Dr. Jacobs has been a leader in the field of mobile communications for over two decades and is a key architect of Qualcomm's strategic vision. Through his technological innovations and advocacy, Jacobs spearheaded Qualcomm's efforts to develop and commercialize mobile technology breakthroughs that have contributed significantly to the growth of the company and the industry at large. Some of the most notable initiatives that can be attributed to Jacobs' leadership include: the first smartphone based on Palm OS®; the inclusion of GPS capabilities in mobile phones; the Brew® system, which enables over-the-air downloading of applications; QChat, a VOIP, push-to-talk system, and mirasol®, an advanced reflective display technology.</div><br/>
+
+        <div>"I am honored to be the 2013 recipient of the Edison Achievement Award and recognized among the world's most inventive and creative thinkers," Dr. Jacobs said. "At Qualcomm, we are dedicated to fostering innovation and empowering the inventors of tomorrow, and look forward to continuing to push the boundaries of what's possible in mobile to literally change the world."</div><br/>
+
+        <div>"We're extremely honored that Paul will be joining the ranks of our extraordinary Edison Achievement Award winners," said Frank Bonafilia, Executive Director of the Edison Awards. "His extraordinary contributions to the world of wireless technology have changed the way people all over the world communicate. Paul's vision, leadership and compassion serve as a living acknowledgement and embodiment of Thomas Edison's values and principles," Bonafilia added.</div><br/>
+
+        <div>A sample of past Edison Achievement Award winners include:</div><br/>
+
+        <div>Chris Anderson, TED Curator and Founder of the Sapling Foundation</div><br/>
+        <div>Steve Jobs, CEO of Apple, Inc.</div><br/>
+        <div>Alan Mulally, CEO of Ford Motor Company</div><br/>
+        <div>John S. Hendricks, Founder and Chairman, Discovery Communications</div><br/>
+        <div>A.G. Lafley, Retired Chairman and CEO, Procter & Gamble</div><br/>
+        <div>Martha Stewart, Chairman, Martha Stewart Living Omnimedia, LLC</div><br/>
+        <div>Ted Turner, Vice Chairman, Time Warner</div><br/>
+
+        <div>About the Edison Awards™</div><br/>
+
+        <div>The Edison Awards is a program conducted by Edison Universe, a non-profit, 501(c)(3) organization dedicated to fostering future innovators. The Awards have been recognizing and honoring the best in innovations and innovators since 1987. They honor game-changing innovations that are at the forefront of new product and service development, marketing and human-centered design, and are one of the highest accolades a company can receive in the name of successful innovation. The 2013 Edison Awards are sponsored by Nielsen, Discovery Communications, Science Channel and USA Today. For more information about the Edison Awards and a list of past winners, visit www.edisonawards.com.</div><br/>
+
+        <div class="gray-header">Published</div>
+        <div>Jan 08, 2013</div>
+        <div class="gray-header">Source</div>
+        <div>Edison Universe</div>
+        <div>http://finance.yahoo.com/news/paul-e-jacobs-ph-d-150000163.html</div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--a3-->
+<div data-role="page" id="a3">
+    <a class="back arrow" href='#articles' data-transition="slide">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        Qualcomm CEO Says NSA Fallout Impacting China Business
+    </div>
+    <div class="a-body">
+        <div>Mobile device chipmaker Qualcomm Inc. QCOM +0.27%  expects to continue growing in China, but Chief Executive Paul Jacobs acknowledged U.S. restrictions on Chinese companies and revelations about surveillance by the National Security Agency are impacting its business in the fast-growing country.</div><br/>
+
+        <div>"We are definitely seeing increased pressure," said Mr. Jacobs in an interview with The Wall Street Journal. "All U.S. tech companies are seeing pressure."</div><br/>
+
+        <div>Mr. Jacobs stopped short of saying the pressure hurt its sales, but he did say it affected the way the company operated in China.</div><br/>
+
+        <div>"[You] have to be very cautious," he said. "We are always very careful with whatever steps we take. How we sell. How we interact."</div><br/>
+
+        <div>Qualcomm tries to be a good partner with some local Chinese manufacturers and build some of its computer chipsets in mainland China, he said. The company doesn't build cutting edge technology there, but it does build some older trailing technologies in China.</div><br/>
+
+        <div>Mr. Jacobs said it is "very delicate balancing act that goes on. There's no question there is an impact." In the fiscal year ended Sept. 29, Qualcomm generated $1 billion in revenue from China.</div><br/>
+
+        <div>Mr. Jacobs' remarks come as some big U.S. computer and software companies are reporting a sudden chill in China sales. On Nov. 14, Cisco CSCO +0.56%  Systems Inc. reported orders from China fell 18% and said its world-wide revenue would decline 8% to 10% in the current quarter, in part because of continued weakness in China.</div><br/>
+
+        <div>Executives cited several reasons for the drops, including a slowing Chinese economy, a pause related to the current Communist Party Central Committee meeting and a stronger push for Chinese companies to use homegrown products.</div><br/>
+
+        <div>Cisco executives were the most explicit so far in suggesting that Chinese customers, particularly those with government ties, may be cutting purchases of U.S. tech gear in response to fallout from the NSA revelations and the U.S. government's de facto ban on telecom gear from China's Huawei Technologies Co.</div><br/>
+
+        <div>A U.S. congressional investigation last year concluded that Huawei and ZTE Corp. ZTCOY -1.49%  pose security risks to the U.S. because their telecom equipment could be used for spying on Americans. Huawei and ZTE have repeatedly denied the allegations.</div><br/>
+
+        <div>Despite the rising pressure, Mr. Jacobs said he thinks Qualcomm "can gain significant share of the China market." Qualcomm expects to see a lot of growth from China as the country begins to move to so-called LTE technology, the faster successor to third-generation wireless technology.</div><br/>
+
+        <div>"Hopefully in short, medium and long term that things will move forward with the way that they have and with the market really driving things," he said.</div><br/>
+
+        <div class="gray-header">Published</div>
+        <div>Nov 22, 2013</div>
+        <div class="gray-header">Source</div>
+        <div>By SPENCER E. ANTE </div>
+        <div>http://online.wsj.com/news/articles/SB10001424052702304337404579214353783842062/</div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--a4-->
+<div data-role="page" id="a4">
+    <a class="back arrow" href='#articles' data-transition="slide">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        Qualcomm Makes Surprise Entry to ‘Smartwatch’ Fray
+    </div>
+    <div class="a-body">
+        <div>Qualcomm is not on many most-likely-to-succeed lists for wearable technology, or consumer products at all for that matter. But CEO Paul Jacobs is undaunted, announcing on Wednesday its entry in the race to sell a new breed of smartwatches.</div><br/>
+
+        <div>The chip maker used an annual event in its home city of San Diego to unveil Toq, a wrist-worn device that is designed to be a helpful companion to a user’s smartphone–and happens to come to light the same day as Samsung announced a similar product called Galaxy Gear. Sony unveiled a smartwatch in June, and Apple also is expected to enter the same turf, as the Journal and others have reported.</div><br/>
+
+        <div>Toq uses a Qualcomm Bluetooth chip, not surprisingly, as well as an internally developed display technology called Mirasol that is designed for viewing in bright sunlight as well as a darkened room. Jacobs called it the first smartwatch with a color touchscreen display that is always on–and yet can still go days without charges.</div><br/>
+
+        <div>Rather than a full-bore commercial product, Toq might be best considered a visual aid for other customers considering building their own smart watches, since Qualcomm would really rather supply components to an array of electronics companies rather than compete with them. It is also a proof of concept for a technology called AllJoyn that Qualcomm is pushing as a common way for devices to exchange information, and an inspiration for developers to create apps that work with the device.</div><br/>
+
+        <div>“It’s our way of trying to drive the category forward,” Jacobs said.</div><br/>
+
+        <div>But Qualcomm seems to has worked pretty diligently on Toq, including hiring outside industrial design help. The device comes with wireless stereo headphones for listening to music as well as for making phone calls.</div><br/>
+
+        <div>Qualcomm plans to begin selling a “limited edition” of the device in mid-October for about $300. Rob Chandhok, Qualcomm’s president of Internet services, who helped lead the development effort, suggests the company is initially thinking about units sales in the “tens of thousands,” rather than many millions.</div><br/>
+
+        <div>Jacobs, the son of Qualcomm co-founder and former CEO Irwin Jacobs, tends to be pretty self-deprecating about the company’s efforts to sell products directly to end-users. For one thing, he presided over Qualcomm’s aborted effort to market its own cellphones before its success in selling chips for handsets made such diversions unnecessary.</div><br/>
+
+        <div>Other notable reverses include an unsuccessful campaign to sell special-purpose gadgets for receiving video content to help popularize a special broadcast service called Flo TV rather than conventional cellular networks. (Qualcomm made lemonade from those lemons in 2011 by selling its spectrum to AT&T for $1.9 billion).</div><br/>
+
+        <div>Toq, like some other smart watches that have been unveiled so far, uses Bluetooth wireless technology to communicate with a nearby smartphone (it only works on Android devices at the moment).</div><br/>
+
+        <div>One of the key uses for such devices is to get alerts–such as about weather, stock prices or emails–with enough information to know whether something is important enough to take out the smartphone for further action. But the watch can’t be use to create email replies, and has no long-distance communications of its own–at least so far.</div><br/>
+
+        <div>“This is definitely not a phone on your wrist,” Chandhok says.</div><br/>
+
+        <div>Qualcomm followers will remember that the company has shelved plans for large-scale manufacture of the Mirasol displays. They were originally intended for devices like e-readers but didn’t fit as that market evolved; customers gravitated for their lowest-priced models to monochrome displays made by E Ink, while tablets gravitated to full-color LCD alternatives.</div><br/>
+
+        <div>Update: An earlier version of this item incorrectly stated that the Toq would use a Qualcomm processor chip. Chandhok, at a press conference, said the company chose a simple “off-the-shelf” processor based on a design from ARM Holdings. He declined to say which Qualcomm competitor actually manufactures the chip, stating he would let that information come out during “teardown” reports from firms that disassemble new consumer gadgets to study their components.</div><br/>
+
+        <div class="gray-header">Published</div>
+        <div>Sep 4, 2013</div>
+        <div class="gray-header">Source</div>
+        <div>http://blogs.wsj.com/digits/2013/09/04/qualcomm-makes-surprise-entry-to-smartwatch-fray</div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--a5-->
+<div data-role="page" id="a5">
+    <a class="back arrow" href='#articles' data-transition="slide">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        Qualcomm Sees Much Broader Future for LTE
+    </div>
+    <div class="a-body">
+        <div>Many people have gotten used to LTE, the fourth-generation cellular technology now found in smartphones. Get ready to see it used in new ways in new places, says QualcommQCOM +0.27% CEO Paul Jacobs.</div><br/>
+
+        <div>The speedy technology, whose initials stand for long-term evolution, now sends voice calls and data over cellular networks using licensed radio frequencies. But Jacobs disclosed Wednesday that Qualcomm now plans to push the use of LTE also in unlicensed radio spectrum, the approach used for short-range technologies like Wi-Fi and Bluetooth.</div><br/>
+
+        <div>In other words, future smartphones or tablets might communicate with devices in the home or office using the same radio circuitry as they use to talk to remote cell towers.</div><br/>
+
+        <div>Jacobs was quick to state that the move is not designed to “step on” Wi-Fi, as Qualcomm has a major business selling Wi-Fi technology. But the two technologies can coexist and improve data delivery, he said, as LTE has a more sophisticated radio and can work alongside Wi-Fi in ways that limit interference.</div><br/>
+
+        <div>“It’s a better neighbor,” Jacobs said, during a meeting with analysts in New York.</div><br/>
+
+        <div>Whether wireless capability would be added to any new devices as a result of the technology change is not clear, but the performance could be better. “All the user would experience is faster and more reliable connectivity than they had before,” said Patrick Moorhead, an analyst with Moor Insights & Strategy.</div><br/>
+
+        <div>There is more evolution of LTE afoot, Jacobs said. One advance is a trend to aggregate different swaths of radio spectrum to create the equivalent of a broader highway to users, boosting how many bits can arrive per second.</div><br/>
+
+        <div>Another is using LTE in a one-way broadcast mode, an aid in letting people watch live events like concerts and sports contests in a way that doesn’t clog the airwaves, Jacobs said.</div><br/>
+
+        <div>Still another is LTE Direct, which uses the technology for sending signals over short-distances between smartphones and tablets and other devices. Jacobs said the technology is particularly good at discovering nearby users or devices a user wants to connect with without adding much to data traffic in a cell site. Qualcomm says LTE Direct can also be particularly private, allowing devices to find others without revealing their own identity or exact location.</div><br/>
+
+        <div>Discovering nearby devices is an obvious potential use for Toq, the new smartwatch that Qualcomm has announced, according to Jacobs. (The device will be available Dec. 2, starting at $349.99).</div><br/>
+
+        <div>Besides many projects based on developing conventional chips, Jacobs also said Qualcomm has built some “neural” style chips that are based on how the human brain works, under a project called Zeroth. Such a design minimizes the need to specially program functions into a chip, which can learn what to do by watching a user’s behavior, he said.</div><br/>
+
+        <div>“The early results are very encouraging,” Jacobs said.</div><br/>
+
+        <div>Less encouraging was the reaction to Qualcomm’s updated plans to share its ample cash supply with investors, a hot topic on Wall Street.</div><br/>
+
+        <div>Jacobs set a target of returning 75% of Qualcomm’s free cash flow to investors, boosting dividends in excess of earnings growth and continuing “opportunistic” stock repurchases–providing a baseline that repurchase would be “anti-dilutive.”</div><br/>
+
+        <div>Qualcomm’s shares, which dipped with its slower growth forecast along with earnings last week and then rebounded sharply, got no additional bounce on the moves or other comments in management’s early presentations. The stock was recently trading at $71.62, down 21 cents.</div><br/>
+
+        <div class="gray-header">Published</div>
+        <div>Nov 20, 2013</div>
+        <div class="gray-header">Source</div>
+        <div>http://blogs.wsj.com/digits/2013/11/20/qualcomm-sees-much-broader-future-for-lte</div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--a6-->
+<div data-role="page" id="a6">
+    <a class="back arrow" href='#articles' data-transition="slide">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        Qualcomm Steps Up Attack on Internet of Things
+    </div>
+    <div class="a-body">
+        <div>QualcommQCOM +0.27% has done well by the smartphone boom, with a market value that currently tops $120 billion. The chip maker is now angling to bring more smarts to the smart home and beyond.</div><br/>
+
+        <div>The San Diego-based company, in news pegged to an analyst meeting in New York Wednesday, is introducing an unusual chip line that combines communications functions–including Wi-Fi, and the ability to send data down power lines–with a substantial amount of computing capability.</div><br/>
+
+        <div>Amir Faintuch, president of the unit known as Qualcomm Atheros, said the hybrid chips will let relatively simple devices like home gateways, routers and media servers do much more than they do now. Among other things, he said, they can run software to handle jobs like controlling home lighting, humidity and security.</div><br/>
+
+        <div>He compared the potential effect of the new Qualcomm Internet Processor to the way the world changed when feature phones were supplanted by smartphones after the arrival of the iPhone in 2007. “We want to do the same for the home,” Faintuch said.</div><br/>
+
+        <div>Not that Qualcomm chips aren’t in some home products already. The company in 2011 bought chip maker Atheros Communications for $3.1 billion, a deal that augmented Qualcomm’s cellular expertise with Wi-Fi chips and other products, some of which have been sold in the home.</div><br/>
+
+        <div>But Faintuch says the new processor is the first really important product combining technology from San Diego and the former Atheros operations in Silicon Valley. “We think this is probably the most significant fruit coming out of the marriage,” he says.</div><br/>
+
+        <div>Such chips may be installed in products sold by telecom carriers or cellular base stations they use, Faintuch says. More broadly, Qualcomm is preparing for the day many more devices add intelligence and connections to the Web–a trend broadly known as the Internet of Things.</div><br/>
+
+        <div>Paul Jacobs, Qualcomm’s chief executive, highlights a range of new scenarios when more devices have processors and communications and start collaborating. One is using his own company’s new Toq smartwatch, to discover devices nearby that are capable of exchanging information. (Toq will be available Dec. 2, starting at $349.99).</div><br/>
+
+        <div>“We’ve been working with white-goods manufacturers,” Jacobs said in a meeting with Wall Street Journal editors Tuesday. “They are interested in having their goods connect to something on the wrist.”</div><br/>
+
+        <div>But Qualcomm is not shutting off the flow of new chips aimed at smartphones and tablets, including some being unveiled before the analyst meeting kicks off Wednesday.</div><br/>
+
+        <div>One is an update of the company’s widely used Snapdragon processor line. Among other things, the new chip is designed to be able to capture and play video images using the new 4K standard starting to arrive in Ultra High-Definitions TVs.</div><br/>
+
+        <div>To do that, the new Snapdragon 805 supports a new video compression standard called H.265, said Murthy Renduchintala, an executive vice president in Qualcomm’s chip unit.</div><br/>
+
+        <div>Qualcomm is also offering updated chips based on the fourth-generation LTE technology, a field where the company had a big head start on rivals. One attribute of a new addition to the company’s Gobi product line is the ability to aggregate different swaths of radio spectrum to boost data bandwidth, Renduchintala said</div><br/>
+
+        <div>In some cases, the new chips can download data as fast as 300 megabits per second, compared with a peak of somewhat above 150 megabits, he said.</div><br/>
+
+        <div>Products based on the new chips are not expected until sometime in 2014.</div><br/>
+
+        <div class="gray-header">Published</div>
+        <div>Nov 20, 2013</div>
+        <div class="gray-header">Source</div>
+        <div>http://blogs.wsj.com/digits/2013/11/20/qualcomm-steps-up-attack-on-internet-of-things</div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--a7-->
+<div data-role="page" id="a7">
+    <a class="back arrow" href='#articles' data-transition="slide">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        Tech Giant Qualcomm Ages Gracefully
+    </div>
+    <div class="a-body">
+        <div>The wireless chip-maker may be having something of a midlife crisis, but here's why shares could climb 40%.</div><br/>
+
+        <div>In an industry that prizes youthful energy, investors have been worried about a midlife crisis at wireless chip giant Qualcomm . Ageists will miss out: Qualcomm is still fit and has the resources to stay healthy and profitable for a good long time.</div><br/>
+
+        <div>Qualcomm (ticker: QCOM) dominates the market for communications chips used in smartphones and wireless devices worldwide, and has an estimated three-year lead over competitors in the latest cellular technology, known as LTE. In addition to manufacturing its own chips, it licenses its technology to other chipmakers, which provides a lucrative royalty stream.</div><br/>
+
+        <div>It's a virtuous cycle. The company's lush cash flow allows it to invest heavily to maintain its technological lead. In the past five years, Qualcomm has invested nearly $15 billion on research and development, easily spending more on wireless chip technology than its largest rivals combined. And it's sitting on nearly $30 billion in cash. In the fiscal year that ended Sept. 29, the company bought back $4.6 billion worth of stock, reducing shares outstanding by 4%, and it has raised its dividend for 11 straight years. Last week Chief Executive Paul Jacobs told analysts that the firm would return 75% of its free cash flow and increase the dividend by more than earnings growth, which in fiscal 2014 is expected to be 10% to 14%. The stock yields 1.9%.</div><br/>
+
+        <div>That earnings growth figure, however, is a far cry from the 30% rate Qualcomm has averaged over the past three years. One reason is that the number of people without a smartphone is shrinking. Another is that more sales are coming from emerging markets, where phone prices are lower, and Qualcomm's royalties and chip revenue are a function of the average selling price for the phones using its technology or chips.</div><br/>
+
+        <div>But Jacobs assured analysts that while its chipset business will "moderate" a bit in 2014, beneficial long-term trends are still intact, such as more frequent phone upgrades in the U.S., the use of video and other data-heavy applications that require more complex chips, and the launch of LTE in China. Last year sales of lower-tier devices, primarily in China, comprised more than $1 billion of the company's $25 billion in total revenue.</div><br/>
+
+        <div>In fiscal 2013, Qualcomm's sales grew 30%, and earnings grew 12%, to $6.9 billion, or $3.91 a share. The company offered a much more cautious outlook for fiscal 2014, however, forecasting revenue growth of 5% to 11%, to $26 billion to $27.5 billion. Chief operating officer Steve Mollenkopf told Barron's that despite the "maturation of developed markets, we are still committed to double-digit growth."</div><br/>
+
+        <div>The stock recently hit a 52-week high of $72.43 but has lagged the market and peers. At 14 times 2014 earnings, Qualcomm trades near its historic lows, and is getting little credit for its stable royalty stream and the $17 a share in cash, which has drawn value investors like Oakmark's Bill Nygren and Omega Advisors' Leon Cooperman.</div><br/>
+
+        <div>Qualcomm's growth is slowing, but it still stands out. "Very few large tech stocks can grow revenue at a double-digit pace without M&A or buybacks," says Credit Suisse IT hardware and communications technology analyst Kulbinder Garcha. "Qualcomm can, even without its buybacks." Garcha thinks the stock can hit $85, more than 15% above where it is now, based on a sum-of-the-parts analysis that values Qualcomm's chip business in line with peers, despite its better growth prospects.</div><br/>
+
+        <div>FOUNDED IN SAN DIEGO in 1985 by Irwin Jacobs, Paul's father, Qualcomm has expanded well beyond its signature CDMA technology—the basis for 3G wireless technology and the source of Qualcomm's lucrative royalties. Now the younger Jacobs is targeting the "Internet of things," where automobiles, health care devices, and the like are continuously connected, and you can, for instance, remotely control lights or appliances in your home, or medical devices send a signal to your smart watch if your glucose levels rise too high. By 2020, Jacobs says there should be 22 connected devices per U.S. home, up from seven now. More devices means more chips.</div><br/>
+
+        <div>For investors, Qualcomm offers an attractive way to play the prevalence of mobile devices, without having to pick a winner in the Samsung-Apple battle. Smartphones are still a growing market; industry research firm IDC expects 1.7 billion smart phones to be sold in 2017, up from 724 million last year. IDC forecasts global shipments of smart-connected devices (including tablets) to total almost 1.6 billion in 2013, up 28% from 1.2 billion last year.</div><br/>
+
+        <div>Despite the concerns to the contrary, average selling prices have risen over the past three years. Qualcomm expects a modest single-digit price decline over the next five years on the $226 average selling price of the devices its chips are in. Even if there's a decline in pricing, the royalty business gives Qualcomm an edge. "Come hell or high water they are collecting 3% of the price of virtually every handset sold in the world," says Josh Spencer, manager of the T. Rowe Price Global Technology fund.</div><br/>
+
+        <div>Qualcomm doesn't have to do anything Herculean. It just needs to continue to boost dividends and buybacks, and to grow at double-digit rates. That should convince investors it shouldn't be grouped with large technology firms that aren't aging as gracefully, such as Microsoft (MSFT) and Intel (INTC), which are growing much more slowly. "It's odd that [Qualcomm] is getting the same treatment, because it doesn't face the same long-term threats," says Spencer. He thinks the shares could rise as much as 40% "if the stock comes back into favor."</div><br/>
+
+        <div class="gray-header">Published</div>
+        <div>Nov 23, 2013</div>
+        <div class="gray-header">Source</div>
+        <div>By RESHMA KAPADIA </div>
+        <div>http://online.barrons.com/article/SB50001424053111904253404579208012886245816.html#articleTabs_article%3D1</div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--a8-->
+<div data-role="page" id="a8">
+    <a class="back arrow" href='#articles' data-transition="slide">
+        Back
+    </a>
+    <img class="gb-ct-img" src="img/PaulEJacobs.png" alt="image"/>
+    <div class="d-title">
+        Today's CEO Leader in STEM: Dr. Paul E. Jacobs of Qualcomm Incorporated
+    </div>
+    <div class="a-body">
+        <div>The 100 CEO Leaders in STEM Blog Series features a new CEO Monday-Friday and the exemplary work his or her company is doing to support 21st Century STEM learning and workforce development. Learn more and download the whole copy at STEMconnector.org/100CEOs. Follow the conversation on Twitter using #100STEMCEOs. Today's CEO Leader is Dr. Paul E. Jacobs of Qualcomm Incorporated.</div><br/>
+
+        <div>Dr. Paul E. Jacobs is chairman and chief executive officer of Qualcomm Incorporated. A leader in the field of mobile communications for more than two decades and a key architect of Qualcomm’s strategic vision, Dr. Jacobs spearheaded Qualcomm’s efforts to develop and commercialize mobile technology breakthroughs that have contributed significantly to the growth of both the Company and the industry. Important developments which began under his management include: the first smartphone based on Palm OS®; inclusion of GPS capabilities in mobile phones; the BREW® application download system.</div><br/>
+
+        <div>As an innovative leader of a broad range of technical teams within Qualcomm, Dr. Jacobs has been granted more than 45 patents for his inventions in the areas of wireless technology and devices. He is chairman of the U.S.-Korea Business Council and the Advisory Board of the University of California, Berkeley, College of Engineering; Global eHealth Foundation Ambassador; a member of the US-India CEO Forum and trustee of the Museum of Contemporary Art San Diego.</div><br/>
+
+        <div>Dr. Jacobs received his bachelor's (1984) and master's (1986) degrees as well as his doctorate (1989) in electrical engineering from the University of California, Berkeley, and subsequently endowed the Paul and Stacy Jacobs Distinguished Professor of Engineering chair at the school. He is a member of the Phi Beta Kappa, Eta Kappa Nu and Tau Beta Pi honor societies.</div><br/>
+
+        <div>Q&A</div><br/>
+
+        <div>How do we encourage students to continue their study of STEM subjects, particularly women and underrepresented minorities?</div><br/>
+
+        <div>At Qualcomm, we understand how important it is to start early in STEM education. We are committed to improving STEM education for students during their primary, secondary, and higher education years and to expanding educational opportunities for underrepresented students. We believe that getting students to study STEM as early as possible and empowering them at a young age is crucial to fostering their future interest and aptitude in STEM subjects. To this point, Qualcomm is a proud member of Change the Equation, which pledges to create widespread literacy in STEM. The initiative aims to improve STEM education for every child, at any age, as well as enable a pool of highly capable STEM teachers.</div><br/>
+
+        <div>Additionally, the Company is also a member of the National Center for Women and Information Technology (NCWIT), which supports increasing women's participation in technology and computing, and helps organizations recruit, retain, and advance women from K-12 and higher education through industry and entrepreneurial careers by providing community, evidence, and action.</div><br/>
+
+        <div>It is through programs like these that we can deepen appreciation and excitement for STEM programs and careers, and increase enrollment and success. We’ve seen first-hand that a STEM educated workforce breeds opportunity, and as a global leader and developer of advanced wireless technologies, our highly skilled employees are our most important asset. Their ability to calculate, analyze and innovate is the cornerstone of our achievements and their expertise in STEM subject matter is critical to our continued success.</div><br/>
+
+        <div>What area of STEM are you most passionate about?</div><br/>
+
+        <div>I am an engineer at heart. I believe in the celebration of the engineer’s art of creating an entirely new technology, or improving the foundation of an existing technology. You only have to look at the innovation and impact that has occurred around mobile to understand how important it is for today’s youth to master the fundamental areas of STEM. Not only will they need those skills to participate in the amazing opportunities ahead but they will need them to push for greater technological breakthroughs. Engineers are in high demand in our country – and around the globe – and it’s important to progress STEM education to find our next generation of inventors, leaders and entrepreneurs.</div><br/>
+
+        <div>What principles do you apply to your professional and personal life to advance STEM education?</div><br/>
+
+        <div>I value innovation and promote the idea that anything is possible. I’ve tried, both professionally and personally, to promote that thinking and ethos in my work and personal life, which I believe ties back to the advancement of STEM education. At Qualcomm, we use advanced technology and approaches to solve fundamental global issues. Whether we’re working to connect the unconnected or introducing wireless education and wireless healthcare to underserved populations, we pride ourselves on our dedication to smashing boundaries. I have always challenged myself and my colleagues to think big about what’s possible and what we can do to enable individualized and personalized experiences, while at the same time promoting collaboration and the sharing of ideas.</div><br/>
+
+        <div>What is the STEM initiative that your company has supported are you most proud?</div><br/>
+
+        <div>In addition to being a member of Change the Equation, I am most proud of Qualcomm’s initiatives to improve STEM education in our own backyard. As a founding supporter of the Encorps Teachers Program, a nonprofit organization that recruits retiring STEM professionals to teach at California’s under-resourced public high schools, Qualcomm aims to tackle the public education crisis in our home state. Encorps uses the knowledge and experience from seasoned math and science professionals to teach the next generation. Additionally, we established the Qualcomm Institute for Innovation and Educational Success at San Diego State University, supporting Project Lead The Way, which trains middle and high school teachers to implement problem-based, pre-engineering coursework into their classes, as well as Improving Student Achievement in Mathematics (ISAM) which improves students’ mathematics understanding and achievement by enhancing teachers’ content knowledge of mathematics and mathematics teaching effectiveness in grades K-12. Lastly, this year we were the title sponsor for FIRST Robotics Competition. </div><br/>
+
+        <div>What is your advice to those involved in promoting STEM education?</div><br/>
+
+        <div>We need corporate leaders to make the commitment to advancing STEM education. It is just as important as our need for bright young minds to become the world’s next generation of engineers. Our leaders must invest resources and time to provide mentorship and guidance to students of all ages, and to encourage an entrepreneurial spirit and innovative way of thinking. The technology industry is exciting in that there are pioneers introducing their new ideas, companies, solutions and start-ups on a daily basis. We need these up-and-coming technology mavericks to also empower our students by sharing their experiences and wisdom and to promote STEM education.
+        </div><br/>
+
+        <div class="gray-header">Published</div>
+        <div>Oct 7, 2013</div>
+        <div class="gray-header">Source</div>
+        <div>http://blog.stemconnector.org/todays-ceo-leader-stem-dr-paul-e-jacobs-qualcomm-incorporated</div>
+    </div>
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Tweets -->
+<div data-role="page" id="videos">
+    <div class="page-title">
+        <span class="title" style="margin-left:13%">Tweets</span>
+        <a class="right" href='javascript:getTweets();'>
+            <img src="img/refresh.png" style="width:25px"/>
+        </a>
+    </div>
+    <div id="tweetList" class="list">
+        
+    </div>
+    <div id="loader" style="visibility:hidden">
+        <img src="css/images/ajax-loader.gif" style="display: block;margin-left: auto; margin-right: auto;">
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="slide" class="bar-style">
+                        <img class="bag-icon" src="img/user.png"/>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#articles" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/star.png"/>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#videos" data-transition="slide" class="bar-style">
+                      <img class="bag-icon" src="img/twitter.png"/>
+                        Tweets
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('[data-position=fixed]').fixedtoolbar({ tapToggle:false});
+    var totalEl = 0;
+
+    currentVideoId = "";
+    function playSelectedVideo(id){
+        currentVideoId = id;
+        var video = document.getElementById(id);
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+
+    function stopCurrentVideo() {
+        var video = document.getElementById(currentVideoId);
+        video.pause();
+    }
+
+    function getTweets() {
+        $("#tweetList").html("");
+        $("#loader").css("visibility","visible");
+        var twitterAPI = "http://54.215.134.149:8080/data/getdata?type=SearchTweets&q='Qualcomm'";
+        $.getJSON( twitterAPI, {
+            format: "json"
+        }).done(function( data ) {
+            var tweets = JSON.parse(data.Error);
+            for(var i = 0; i < tweets.statuses.length; i++) {
+
+                var pp = Date.parse(tweets.statuses[i].created_at);
+                var newDate = new Date(pp);
+
+                $('#tweetList').append(
+                        "<div class='tbg'>"
+                        + "<img class='t-img' src='" + tweets.statuses[i].user.profile_image_url + "'/>"
+                        + "<div class='user'>" + tweets.statuses[i].user.name + "</div>"
+                        + "<div class='t-date'>" + newDate.getDate() + " " + getMonthName(newDate.getMonth()) + "</div>"
+                        + "<div class='tweet'>" + tweets.statuses[i].text + "</div><div style='clear:both'></div>"
+                        +"</div>");
+
+                if(i == 0){
+                    $('#news').append(
+                        "<div style='display:block'>"
+                        + "<img class='tt-img' src='" + tweets.statuses[i].user.profile_image_url + "'/>"
+                        + "<div class='t-user'>" + tweets.statuses[i].user.name + "</div>"
+                        + "<div class='tt-date'>" + newDate.getDate() + " " + getMonthName(newDate.getMonth()) + "</div>"
+                        + "<div class='t-tweet'>" + tweets.statuses[i].text + "</div><div style='clear:both'></div>"
+                        +"</div>");
+                }else{
+                    $('#news').append(
+                        "<div style='display:none'>"
+                        + "<img class='tt-img' src='" + tweets.statuses[i].user.profile_image_url + "'/>"
+                        + "<div class='t-user'>" + tweets.statuses[i].user.name + "</div>"
+                        + "<div class='tt-date'>" + newDate.getDate() + " " + getMonthName(newDate.getMonth()) + "</div>"
+                        + "<div class='t-tweet'>" + tweets.statuses[i].text + "</div><div style='clear:both'></div>"
+                        +"</div>");
+                }
+            }
+
+            totalEl = tweets.statuses.length;
+            var currentEl = 0;
+            $("#loader").css("visibility","hidden");
+
+            // Bind tweets to the home page
+            var tid = setInterval(function() {
+                $('#news').children().eq(currentEl).slideUp( "slow", function() {
+                    if(currentEl < totalEl - 1)
+                        currentEl += 1;
+                    else
+                        currentEl = 0;
+
+                    $('#news').children().eq(currentEl).fadeIn("slow");
+                });
+            }, 5000);
+        });
+    }
+
+    getTweets();
+
+    function getMonthName(month){
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        for(var i=0; i< months.length; i++){
+            if(i == month){
+                return months[i];
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
